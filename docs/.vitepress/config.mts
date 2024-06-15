@@ -16,10 +16,12 @@ export default defineConfig({
 
     sidebar: {
       "/bigdata/": sidebarBigData(),
+      "/cryptography/": sidebarCryptography(),
+      "/algorithm/": sidebarAlgorithm(),
     },
 
     editLink: {
-      pattern: "https://github.com/process1024/vitepress/edit/main/docs/:path",
+      pattern: "https://github.com/wyx-hhhh/DevGuide/edit/main/docs/:path",
       text: "在 github 上编辑此页",
     },
 
@@ -52,10 +54,20 @@ function nav() {
     },
     {
       text: "大数据",
-      link: "/bigdata/markdown-examples",
+      link: "/bigdata/index",
       activeMatch: "/bigdata/",
     },
-    // { text: "配置", link: "/config/introduction", activeMatch: "/config/" },
+    {
+      text: "算法与数据结构",
+      link: "/algorithm/index",
+      activeMatch: "/algorithm/",
+    },
+
+    {
+      text: "密码学",
+      link: "/cryptography/index",
+      activeMatch: "/cryptography/",
+    },
     {
       text: "关于我",
       items: [
@@ -74,11 +86,11 @@ function nav() {
 
 function sidebarBigData() {
   return [
-    {
-      text: "介绍",
-      collapsible: true,
-      items: [{ text: "123456?", link: "/bigdata/api-examples" }],
-    },
+    // {
+    //   text: "介绍",
+    //   collapsible: true,
+    //   items: [{ text: "123456?", link: "/bigdata/api-examples" }],
+    // },
     // {
     //   text: "编写",
     //   collapsible: true,
@@ -89,6 +101,25 @@ function sidebarBigData() {
     //     { text: "在Markdown中使用Vue", link: "/guide/using-vue" },
     //     { text: "API参考", link: "/guide/api" },
     //   ],
+    // },
+  ];
+}
+
+function sidebarAlgorithm() {
+  return [
+    // {
+    //   text: "介绍",
+    //   collapsible: true,
+    //   items: [{ text: "123456?", link: "/cryptography/api-examples" }],
+    // },
+  ];
+}
+function sidebarCryptography() {
+  return [
+    // {
+    //   text: "介绍",
+    //   collapsible: true,
+    //   items: [{ text: "123456?", link: "/cryptography/api-examples" }],
     // },
   ];
 }

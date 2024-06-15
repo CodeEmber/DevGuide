@@ -30,4 +30,19 @@ features:
   - icon:  🌟
     title:  技术探索
     details:  带您探索技术世界的奥秘，分享引人入胜、充满创意的思想，让您深刻理解技术变革的驱动力。
+  - icon: 📊
+    title:  大数据技术
+    details: 深度探究大数据技术的应用、优化和挑战，带您探索数据世界的无限可能。
+    link: /bigdata/
+    linkText: 了解更多
+  - icon: 💡
+    title: 算法与数据结构
+    details: 探讨算法原理、数据结构及其应用，助力您构建优秀的编程基础与解决问题的能力。
+    link: /algorithm/
+    linkText: 了解更多
+  - icon: 🔐
+    title:  密码学
+    details: 揭秘密码学的秘密，探讨加密算法、安全协议，保护信息安全的前沿技术与实践。
+    link: /cryptography/
+    linkText: 了解更多
 ---
