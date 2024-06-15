@@ -9,11 +9,17 @@ export default defineConfig({
   lastUpdated: true,
   cleanUrls: true,
   base: "/DevGuide/",
-
+  markdown: {
+    lineNumbers: true,
+    image: {
+      // 默认禁用图片懒加载
+      lazyLoading: true,
+    },
+  },
   themeConfig: {
     logo: "/header.png",
     nav: nav(),
-
+    externalLinkIcon: false,
     sidebar: {
       "/bigdata/": sidebarBigData(),
       "/cryptography/": sidebarCryptography(),
@@ -42,6 +48,7 @@ export default defineConfig({
       prev: "上一页",
       next: "下一页",
     },
+    outline: [2, 4],
     outlineTitle: "这一页",
   },
 });
@@ -86,22 +93,22 @@ function nav() {
 
 function sidebarBigData() {
   return [
-    // {
-    //   text: "介绍",
-    //   collapsible: true,
-    //   items: [{ text: "123456?", link: "/bigdata/api-examples" }],
-    // },
-    // {
-    //   text: "编写",
-    //   collapsible: true,
-    //   items: [
-    //     { text: "Markdown", link: "/guide/markdown" },
-    //     { text: "静态资源", link: "/guide/asset-handling" },
-    //     { text: "Frontmatter", link: "/guide/frontmatter" },
-    //     { text: "在Markdown中使用Vue", link: "/guide/using-vue" },
-    //     { text: "API参考", link: "/guide/api" },
-    //   ],
-    // },
+    {
+      text: "导论",
+      collapsed: false,
+      items: [
+        { text: "大数据基础", link: "/bigdata/导论/大数据基础" },
+        { text: "大数据处理流程", link: "/bigdata/导论/大数据处理流程" },
+      ],
+    },
+    {
+      text: "Hadoop",
+      collapsed: false,
+      items: [
+        // { text: "大数据基础", link: "/bigdata/导论/大数据基础" },
+        // { text: "大数据处理流程", link: "/bigdata/导论/大数据处理流程" },
+      ],
+    },
   ];
 }
 
