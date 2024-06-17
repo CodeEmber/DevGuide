@@ -20,6 +20,7 @@ export default defineConfig({
     logo: "/header.png",
     nav: nav(),
     externalLinkIcon: false,
+    i18nRouting: true,
     sidebar: {
       "/bigdata/": sidebarBigData(),
       "/cryptography/": sidebarCryptography(),
@@ -40,6 +41,23 @@ export default defineConfig({
 
     search: {
       provider: "local",
+      options: {
+        translations: {
+          button: {
+            buttonText: "搜索文档",
+            buttonAriaLabel: "搜索文档",
+          },
+          modal: {
+            noResultsText: "无法找到相关结果",
+            resetButtonTitle: "清除查询条件",
+            footer: {
+              selectText: "选择",
+              navigateText: "切换",
+            },
+          },
+        },
+        // locales: {},
+      },
     },
 
     lastUpdatedText: "最后更新",
@@ -105,7 +123,7 @@ function sidebarBigData() {
       text: "Hadoop",
       collapsed: false,
       items: [
-        // { text: "大数据基础", link: "/bigdata/导论/大数据基础" },
+        { text: "Hadoop基础", link: "/bigdata/Hadoop/Hadoop基础" },
         // { text: "大数据处理流程", link: "/bigdata/导论/大数据处理流程" },
       ],
     },
@@ -122,11 +140,5 @@ function sidebarAlgorithm() {
   ];
 }
 function sidebarCryptography() {
-  return [
-    // {
-    //   text: "介绍",
-    //   collapsible: true,
-    //   items: [{ text: "123456?", link: "/cryptography/api-examples" }],
-    // },
-  ];
+  return [];
 }
