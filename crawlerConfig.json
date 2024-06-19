@@ -1,133 +1,27 @@
 {
     "index_name": "wyx-hhhhio",
-    "maxUrls": 5000,
-    "indexPrefix": "",
+    "start_urls": [
+        "https://wyx-hhhh.github.io/DevGuide/"
+    ],
     "rateLimit": 8,
-    "renderJavaScript": false,
-    "startUrls": [
-        "https://wyx-hhhh.github.io/DevGuide"
-    ],
-    "discoveryPatterns": [
-        "https://wyx-hhhh.github.io/DevGuide/**"
-    ],
-    "schedule": "at 08:11 on Tuesday",
     "maxDepth": 10,
-    "actions": [
-        {
-            "indexName": "wyx-hhhhio",
-            "pathsToMatch": [
-                "https://wyx-hhhh.github.io/DevGuide/**"
-            ],
-            "recordExtractor": {
-                "recordProps": {
-                    "lvl1": ".content h1",
-                    "content": ".content p, .content li",
-                    "lvl0": {
-                        "selectors": "",
-                        "defaultValue": "Documentation"
-                    },
-                    "lvl2": ".content h2",
-                    "lvl3": ".content h3",
-                    "lvl4": ".content h4",
-                    "lvl5": ".content h5"
-                },
-                "aggregateContent": true
-            }
-        }
-    ],
-    "sitemaps": [
-        "https://wyx-hhhh.github.io/DevGuide/sitemap.xml"
-    ],
-    "initialIndexSettings": {
-        "wyx-hhhhio": {
-            "advancedSyntax": true,
-            "allowTyposOnNumericTokens": false,
-            "attributeCriteriaComputedByMinProximity": true,
-            "attributeForDistinct": "url",
-            "attributesForFaceting": [
-                "type",
-                "lang"
-            ],
-            "attributesToHighlight": [
-                "hierarchy",
-                "hierarchy_camel",
-                "content"
-            ],
-            "attributesToRetrieve": [
-                "hierarchy",
-                "content",
-                "anchor",
-                "url",
-                "url_without_anchor",
-                "type"
-            ],
-            "attributesToSnippet": [
-                "content:10"
-            ],
-            "camelCaseAttributes": [
-                "hierarchy",
-                "hierarchy_radio",
-                "content"
-            ],
-            "customRanking": [
-                "desc(weight.pageRank)",
-                "desc(weight.level)",
-                "asc(weight.position)"
-            ],
-            "distinct": 1,
-            "highlightPostTag": "</span>",
-            "highlightPreTag": "<span class=\"algolia-docsearch-suggestion--highlight\">",
-            "ignorePlurals": true,
-            "minProximity": 1,
-            "minWordSizefor1Typo": 3,
-            "minWordSizefor2Typos": 7,
-            "ranking": [
-                "words",
-                "filters",
-                "typo",
-                "attribute",
-                "proximity",
-                "exact",
-                "custom"
-            ],
-            "removeWordsIfNoResults": "allOptional",
-            "searchableAttributes": [
-                "unordered(hierarchy_radio_camel.lvl0)",
-                "unordered(hierarchy_radio.lvl0)",
-                "unordered(hierarchy_radio_camel.lvl1)",
-                "unordered(hierarchy_radio.lvl1)",
-                "unordered(hierarchy_radio_camel.lvl2)",
-                "unordered(hierarchy_radio.lvl2)",
-                "unordered(hierarchy_radio_camel.lvl3)",
-                "unordered(hierarchy_radio.lvl3)",
-                "unordered(hierarchy_radio_camel.lvl4)",
-                "unordered(hierarchy_radio.lvl4)",
-                "unordered(hierarchy_radio_camel.lvl5)",
-                "unordered(hierarchy_radio.lvl5)",
-                "unordered(hierarchy_radio_camel.lvl6)",
-                "unordered(hierarchy_radio.lvl6)",
-                "unordered(hierarchy_camel.lvl0)",
-                "unordered(hierarchy.lvl0)",
-                "unordered(hierarchy_camel.lvl1)",
-                "unordered(hierarchy.lvl1)",
-                "unordered(hierarchy_camel.lvl2)",
-                "unordered(hierarchy.lvl2)",
-                "unordered(hierarchy_camel.lvl3)",
-                "unordered(hierarchy.lvl3)",
-                "unordered(hierarchy_camel.lvl4)",
-                "unordered(hierarchy.lvl4)",
-                "unordered(hierarchy_camel.lvl5)",
-                "unordered(hierarchy.lvl5)",
-                "unordered(hierarchy_camel.lvl6)",
-                "unordered(hierarchy.lvl6)",
-                "content"
-            ]
-        }
+    "selectors": {
+        "lvl0": {
+            "selector": "",
+            "defaultValue": "Documentation"
+        },
+        "lvl1": ".content h1",
+        "lvl2": ".content h2",
+        "lvl3": ".content h3",
+        "lvl4": ".content h4",
+        "lvl5": ".content h5",
+        "content": ".content p, .content li"
     },
-    "ignoreCanonicalTo": true,
-    "safetyChecks": {
-        "beforeIndexPublishing": {
-            "maxLostRecordsPercentage": 10
-        }
-    }
+    "selectors_exclude": [
+        "aside",
+        ".page-footer",
+        ".next-and-prev-link",
+        ".table-of-contents"
+    ],
+    "js_render": true
 }
