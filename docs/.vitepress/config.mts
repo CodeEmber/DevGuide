@@ -40,10 +40,11 @@ export default defineConfig({
     // },
 
     search: {
+      // provider: "local",
       provider: "algolia",
       options: {
         appId: "M37AYU4B3I",
-        apiKey: "0f63857542b55a6862093024f0daa824",
+        apiKey: "c80d2bfd49b47127f2ac92017b0a7254",
         indexName: "wyx-hhhhio",
         placeholder: "搜索文档",
         translations: {
