@@ -22,8 +22,7 @@ export default defineConfig({
     externalLinkIcon: false,
     i18nRouting: true,
     sidebar: {
-      "/bigdata/": sidebarBigData(),
-      "/cryptography/": sidebarCryptography(),
+      "/go/": sidebarGo(),
       "/algorithm/": sidebarAlgorithm(),
     },
 
@@ -76,11 +75,7 @@ function nav() {
       text: "首页",
       link: "/",
     },
-    {
-      text: "大数据",
-      link: "/bigdata/index",
-      activeMatch: "/bigdata/",
-    },
+
     {
       text: "算法与数据结构",
       link: "/algorithm/index",
@@ -88,9 +83,9 @@ function nav() {
     },
 
     {
-      text: "密码学",
-      link: "/cryptography/index",
-      activeMatch: "/cryptography/",
+      text: "Golang",
+      link: "/go/index",
+      activeMatch: "/go/",
     },
     {
       text: "关于我",
@@ -134,10 +129,22 @@ function sidebarAlgorithm() {
     // {
     //   text: "介绍",
     //   collapsible: true,
-    //   items: [{ text: "123456?", link: "/cryptography/api-examples" }],
+    //   items: [{ text: "123456?", link: "/go/api-examples" }],
     // },
   ];
 }
-function sidebarCryptography() {
-  return [];
+function sidebarGo() {
+  return [
+    {
+      text: "Golang入门指南",
+      collapsed: false,
+      items: [
+        { text: "基础介绍", link: "/go/入门指南/基础介绍" },
+        { text: "开发环境", link: "/go/入门指南/开发环境" },
+        { text: "基础知识", link: "/go/入门指南/基础知识" },
+        { text: "函数", link: "/go/入门指南/函数" },
+        { text: "结构体", link: "/go/入门指南/结构体" },
+      ],
+    },
+  ];
 }

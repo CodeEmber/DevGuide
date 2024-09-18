@@ -31,9 +31,9 @@ features:
     title:  技术探索
     details:  带您探索技术世界的奥秘，分享引人入胜、充满创意的思想，让您深刻理解技术变革的驱动力。
   - icon: 📊
-    title:  大数据技术
-    details: 深度探究大数据技术的应用、优化和挑战，带您探索数据世界的无限可能。
-    link: /bigdata/
+    title:  Golang
+    details: 以Golang为主要编程语言，分享Golang的基础知识、实战经验和最佳实践。
+    link: /go/
     linkText: 了解更多
   - icon: 💡
     title: 算法与数据结构
